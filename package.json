@@ -1,0 +1,48 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Holds dependencies for the food_finder application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-ejs-layouts": "^2.4.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.0",
+    "handlebars": "^4.0.10",
+    "method-override": "^2.3.9",
+    "moment": "^2.22.2",
+    "morgan": "^1.9.0",
+    "mysql": "^2.14.1",
+    "mysql2": "^1.4.2",
+    "node-gyp": "^3.6.2",
+    "nodemon": "^1.18.4",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "password": "^0.1.1",
+    "pryjs": "^1.0.3",
+    "sequelize": "^4.38.0",
+    "sequelize-cli": "^3.0.0-3"
+  }
+}

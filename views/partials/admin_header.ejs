@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+ 
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg" style="margin-top: -15px;">
+
+    <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+
+
+        <div class="sidebar-wrapper" >
+            <div class="logo" style="padding-top: 25px;">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    Pannel Lists
+                </a>
+            </div>
+
+            <ul class="nav">
+
+                <% if( userInfo.user_type == 'owner' ) { %>
+
+                  <li class="active">
+                    <a href="dashboard">
+                        <i class="pe-7s-user"></i>
+                        <p>Restaurant Owner Dash Board</p>
+                    </a>
+                </li>
+                <% } if( userInfo.user_type == 'user' ) { %>
+                    <li class="active">
+                        <a href="userDash">
+                            <i class="pe-7s-user"></i>
+                            <p>User Profile</p>
+                        </a>
+                    </li>
+                <% } if( userInfo.user_type == 'admin'  ) { %>
+                <li class="active">
+                    <a href="adminDash">
+                        <i class="pe-7s-user"></i>
+                        <p>Admin Dash Board</p>
+                    </a>
+                </li>
+                <% } %>
+               
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel"  >
+        <nav class="navbar navbar-default navbar-fixed" style="margin-left: ;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">User</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                   
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                           <a href="main">
+                               <p>Home</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/logout">
+                                <p>Log out</p>
+                            </a>
+                        </li>
+                        <li class="separator hidden-lg hidden-md"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>

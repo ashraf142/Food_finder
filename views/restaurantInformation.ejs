@@ -1,0 +1,105 @@
+
+<% include ./partials/admin_header %>
+
+    <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Add Restaurant Information:</h4>
+                            </div>
+                            <div class="content">
+                                <form action = "/insert_restaurants" method = "post" >
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Restaurant Name</label>
+                                                <input type="text" name = "rname"  class="form-control" placeholder="Restaurant Name" value="">
+                                            </div>
+                                        </div>
+
+            
+                                        <div class="col-md-6" >
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Restaurant Type</label>
+                                                <input type="text" name = "rtype" class="form-control" placeholder="Restaurant Type">
+                                            </div>
+                                        </div>
+
+                                         <div class="col-md-6" style="margin-left:10px;margin-right:-20px;">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Opening Time</label>
+                                                <input type="text" name = "op_time" class="form-control" placeholder="Opening Time">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-6" name = "cl_time" style="margin-left:10px;margin-right:-10px;">
+                                            <div class="form-group">
+                                                <label>Closing Time</label>
+                                                <input type="text" class="form-control" placeholder="Closing Time" value=>
+                                            </div>
+                                        </div>
+
+                                        <div class="header">
+                                         <h4 class="title">Restaurant Location:</h4>
+                                        </div>
+                                        <br>
+
+                                         <div class="col-md-6" style="margin-left:10px;margin-right:-20px;">
+                                            <div class="form-group">
+                                                <label>Road No:</label>
+                                                <input type="text" name = "road_no" class="form-control" placeholder="Road No" value=>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6" style="margin-left:10px;">
+                                            <div class="form-group">
+                                                <label>House No:</label>
+                                                <input type="text" name = "house_no" class="form-control" placeholder="House No" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6" style="margin-left:10px;margin-right:-20px;">
+                                            <div class="form-group">
+                                                <label>Block No:</label>
+                                                <input type="text" name = "block_no" class="form-control" placeholder="Block No" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6" style="margin-left:10px;margin-right:-20px;">
+                                            <div class="form-group">
+                                                <label>Thana:</label>
+                                                <input type="text" name = "thana" class="form-control" placeholder="Thana" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6" style="margin-left:10px;margin-right:-20px;">
+                                            <div class="form-group">
+                                                <label>District:</label>
+                                                <input type="text" name = "district" class="form-control" placeholder="District" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6" style="margin-left:10px;margin-right:-20px;">
+                                            <div class="form-group">
+                                                <label>Zip: </label>
+                                                <input type="text" name = "zip" class="form-control" placeholder="Zip" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <button type="submit" class="btn btn-info btn-fill pull-right" style="margin-left:15px;">Add Information</button>
+                                    <div class="clearfix"></div>
+
+                                </form>
+                            </div>
+                        </div>
+                       
+                    </div>
+                  
+
+                </div>
+            </div>
+        </div>
+
+ <% include ./partials/admin_footer %>

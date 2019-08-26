@@ -1,0 +1,95 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<header>
+    <% include ./partials/header %>
+</header>
+
+
+<body class="home">
+<div>
+<main >
+
+        <!-- Popular block starts -->
+        <section class="popular">
+            <div class="container">
+                <br><br><br><br><br><br>
+                <div class="row">
+                    <!-- Each popular food item starts -->
+
+                    <% for (var i = 0; i < results.length; i ++ ) { %>
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 food-item">
+                        <div class="food-item-wrap">
+                            <div class="figure-wrap bg-image" data-image-src="assets/images/fried-chicken.jpg" width="380" height="210">
+                                <div class="distance"><i class="fa fa-pin"></i>1240m</div>
+                                <div class="rating pull-left"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
+                                <div class="review pull-right"><a href="#">198 reviews</a> </div>
+                            </div>
+                            <div class="content">
+                                <h5><a href="profile.html"><%- results[i].food_name %></a></h5>
+                                <div class="product-name"> Type : <%- results[i].food_type %></div>
+                                <div class="price-btn-block"> <span class="price"><%- results[i].price %></span> <a href="#" class="btn theme-btn-dash pull-right">Order Now</a> </div>
+                            </div>
+                            <div class="restaurant-block">
+                                <div class="left">
+                                    <a class="pull-left" href="profile.html"> <img src="http://placehold.it/50x46" alt="Restaurant logo" /> </a>
+                                    <div class="pull-left right-text"> <a href="#"><%- results[i].res_name %></a> 
+                                        <span> 
+                                            <%- results[i].thana %>
+                                        </span> 
+                                    </div>
+                                </div>
+                              <div class="right-like-part pull-right">
+
+                                <form action="/review" method="get">
+                                  <button type="submit" style="color:blue;">Review</button><br>
+                                </form> 
+
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <% } %>
+                    <!-- Each popular food item starts -->
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Featured restaurants ends -->
+       
+       <section class="app-section">
+            <div class="app-wrap">
+                <div class="container">
+                    <div class="row text-img-block text-xs-left">
+                        <div class="container">
+                            <div class="col-xs-12 col-sm-5 right-image text-center">
+                                <figure> <img src="images/app.png" alt="Right Image" class="img-fluid"> </figure>
+                            </div>
+                            <div class="col-xs-12 col-sm-7 left-text">
+                                <h3>The Best Food Delivery App</h3>
+                                <p>Now you can make food happen pretty much wherever you are thanks to the free easy-to-use Food Delivery &amp; Takeout App.</p>
+                                <div class="social-btns">
+
+                                    <a href="#" class="app-btn android-button clearfix">
+                                        <div class="pull-left"><i class="fa fa-android"></i> </div>
+                                        <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">Play store</span> </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</main>
+
+<footer>
+    <% include ./partials/footer %>
+</footer>
+
+</body>
+</html>

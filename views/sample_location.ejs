@@ -1,0 +1,24 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">house_no</th>
+        <th scope="col">road_no</th>
+        <th scope="col">District</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <% for(var i = 0; i < location.length; i++ ) { %>
+        <tr>
+            <th scope="row"> <%- i %> </th>
+            <td><%- location[i].house_no %></td>
+            <td><%- location[i].road_no %></td>
+            <td><%- location[i].district %></td>
+
+        </tr>
+
+    <% } %>
+
+    </tbody>
+  </table>
